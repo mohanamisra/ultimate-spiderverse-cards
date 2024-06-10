@@ -1,16 +1,16 @@
 import {View, Text, StyleSheet, ScrollView, SafeAreaView} from "react-native";
 import Card from "./components/Card";
-import MCUSpiderMan from "./assets/MCUSpiderMan.jpg"
-import SpiderGwen from "./assets/spider-gwen.jpg"
-import Miles from "./assets/miles.jpg"
-import BagMan from "./assets/bagman.webp"
-import BenScarlet from "./assets/benscarlet.webp"
-import Noir from "./assets/noir.jpg"
-import Superior from "./assets/otto.webp"
-import Silk from "./assets/silk.webp"
-import MayDay from "./assets/mayday.jpg"
-import Spidey from "./assets/og.jpg"
-import Venom from "./assets/venom.jpg"
+import MCUSpiderMan from "./assets/images/MCUSpiderMan.jpg"
+import SpiderGwen from "./assets/images/spider-gwen.jpg"
+import Miles from "./assets/images/miles.jpg"
+import BagMan from "./assets/images/bagman.webp"
+import BenScarlet from "./assets/images/benscarlet.webp"
+import Noir from "./assets/images/noir.jpg"
+import Superior from "./assets/images/otto.webp"
+import Silk from "./assets/images/silk.webp"
+import MayDay from "./assets/images/mayday.jpg"
+import Spidey from "./assets/images/og.jpg"
+import Venom from "./assets/images/venom.jpg"
 
 import React from 'react';
 

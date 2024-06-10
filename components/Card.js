@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
         gap: 5,
     },
     heading: {
+        fontFamily: "ComicFont",
         fontWeight: "900",
         fontSize: 26,
     },
