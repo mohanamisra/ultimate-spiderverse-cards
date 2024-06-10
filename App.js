@@ -1,4 +1,5 @@
 import {View, Text, StyleSheet} from "react-native";
+import Card from "./components/Card";
 
 import React from 'react';
 
@@ -6,6 +7,7 @@ const App = () => {
   return (
       <View style = {styles.container}>
         <Text style = {styles.heading}>MARVEL</Text>
+        <Card/>
       </View>
   );
 };
