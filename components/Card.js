@@ -27,12 +27,12 @@ const Card = ({charImage, charName, charPoints, charDesc, charQuote}) => {
 const styles = StyleSheet.create({
     card: {
         width: "80%",
-        height: 500,
+        height: 550,
         borderRadius: 8,
     },
     imageBG: {
         width: "100%",
-        height: 450,
+        height: 500,
         overflow: "hidden",
         borderTopColor: "#A71814",
         borderBottomColor: "#A71814",
