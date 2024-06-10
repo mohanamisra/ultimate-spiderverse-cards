@@ -14,7 +14,9 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#283278",
+    // backgroundColor: "#A71814",
+    // backgroundColor: "#283278",
+    backgroundColor: "#111",
     flex: 1,
     alignItems: "center",
     padding: 20,
