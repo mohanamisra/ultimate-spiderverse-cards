@@ -1,25 +1,32 @@
-import {View, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet, ScrollView, SafeAreaView} from "react-native";
 import Card from "./components/Card";
+import MCUSpiderMan from "./assets/MCUSpiderMan.jpg"
 
 import React from 'react';
 
 const App = () => {
   return (
-      <View style = {styles.container}>
-        <Text style = {styles.heading}>MARVEL</Text>
-          <Card/>
-      </View>
+      <SafeAreaView style = {styles.container}>
+        <ScrollView style={{width: "100%"}} contentContainerStyle={{alignItems: "center", flexGrow: 1 }}>
+          <Text style = {styles.heading}>THE SPIDEY CARD GAME</Text>
+          <Card charImage={MCUSpiderMan} charPoints={"+100"} charName={"MCU" +
+              " Spider-Man"} charDesc={"The teenager who just can't catch a break. Well, at least we got Mr. Stark, right?"}
+                charQuote={"Mr. Stark...I don't feel so good..."}/>
+          <Card charImage={MCUSpiderMan} charPoints={"+100"} charName={"MCU" +
+              " Spider-Man"} charDesc={"The teenager who just can't catch a break. Well, at least we got Mr. Stark, right?"}
+                charQuote={"Mr. Stark...I don't feel so good..."}/>
+        </ScrollView>
+        <View></View>
+      </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: "#A71814",
-    // backgroundColor: "#283278",
     backgroundColor: "#111",
-    flex: 1,
+    flexGrow: 1,
     alignItems: "center",
-    padding: 20,
+    paddingTop: 20,
   },
   heading: {
     color: "#ffffff",
@@ -27,7 +34,7 @@ const styles = StyleSheet.create({
     fontFamily: "sans-serif",
     fontSize: 48,
     textAlign: "center",
-    marginVertical: 25,
+    marginVertical: 20
   },
 })
 

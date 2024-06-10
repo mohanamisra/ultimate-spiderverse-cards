@@ -1,23 +1,22 @@
 import {View, ImageBackground, StyleSheet, Text} from "react-native";
-import MCUSpiderMan from "./../assets/MCUSpiderMan.jpg"
-const Card = () => {
+const Card = ({charImage, charName, charPoints, charDesc, charQuote}) => {
     return (
         <View style={styles.card}>
-            <ImageBackground source = {MCUSpiderMan} style={styles.imageBG} resizeMode={"cover"}>
+            <ImageBackground source = {charImage} style={styles.imageBG} resizeMode={"cover"}>
                 <View style = {styles.cardTop}>
                     <Text style={styles.heading}>
-                        MCU Spider-Man
+                        {charName}
                     </Text>
                 </View>
                 <View style = {styles.cardBottom}>
                     <Text style={styles.points}>
-                        Points: +100
+                        Points: {charPoints}
                     </Text>
                     <Text style = {styles.desc}>
-                        The teenager who just can't catch a break. Well, at least we got Mr. Stark, right?
+                        {charDesc}
                     </Text>
                     <Text style = {styles.quote}>
-                        "Mr. Stark...I don't feel so good..."
+                        "{charQuote}"
                     </Text>
                 </View>
             </ImageBackground>
@@ -28,14 +27,13 @@ const Card = () => {
 const styles = StyleSheet.create({
     card: {
         width: "80%",
-        height: "60%",
+        height: 500,
         borderRadius: 8,
-        alignItems: "center",
-        justifyContent: "center",
     },
     imageBG: {
         width: "100%",
-        height: "100%",
+        height: 450,
+        overflow: "hidden",
         borderTopColor: "#A71814",
         borderBottomColor: "#A71814",
         borderLeftColor: "#283278",
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontWeight: "900",
-        fontSize: 24,
+        fontSize: 26,
     },
     points: {
         fontWeight: "900",
@@ -76,7 +74,6 @@ const styles = StyleSheet.create({
     },
     quote: {
         fontWeight: "500",
-
     }
 })
 
