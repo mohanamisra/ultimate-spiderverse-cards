@@ -7,9 +7,7 @@ const App = () => {
   return (
       <View style = {styles.container}>
         <Text style = {styles.heading}>MARVEL</Text>
-        <View style={styles.cardsContainer}>
           <Card/>
-        </View>
       </View>
   );
 };
@@ -18,8 +16,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#283278",
     flex: 1,
+    alignItems: "center",
     padding: 20,
-    alignItems: "center"
   },
   heading: {
     color: "#ffffff",
@@ -27,13 +25,8 @@ const styles = StyleSheet.create({
     fontFamily: "sans-serif",
     fontSize: 48,
     textAlign: "center",
+    marginVertical: 25,
   },
-  cardsContainer: {
-    width: "100%",
-    flex: 1,
-    alignItems: "center",
-    marginTop: 50,
-  }
 })
 
 export default App;
