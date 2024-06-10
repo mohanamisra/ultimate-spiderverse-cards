@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     },
     quote: {
         fontWeight: "500",
+        fontStyle: "italic"
     }
 })
 
