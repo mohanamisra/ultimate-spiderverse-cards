@@ -25,13 +25,13 @@ const Card = ({charImage, charName, charPoints, charDesc, charQuote}) => {
                 </View>
                 <View style = {styles.cardBottom}>
                     <Text style={styles.points}>
-                        Points: {charPoints}
+                        💥 Points: {charPoints}
                     </Text>
                     <Text style = {styles.desc}>
                         {charDesc}
                     </Text>
                     <Text style = {styles.quote}>
-                        "{charQuote}"
+                        🗨 "{charQuote}"
                     </Text>
                 </View>
             </ImageBackground>
