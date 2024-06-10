@@ -11,10 +11,19 @@ import Silk from "./assets/images/silk.webp"
 import MayDay from "./assets/images/mayday.jpg"
 import Spidey from "./assets/images/og.jpg"
 import Venom from "./assets/images/venom.jpg"
+import {useFonts} from 'expo-font'
+
 
 import React from 'react';
 
 const App = () => {
+
+  const [fontsLoaded] = useFonts({
+    "ComicFont": require("./assets/fonts/ComicFont.ttf"),
+  })
+
+  if(!fontsLoaded)
+    return undefined;
 
   return (
       <SafeAreaView style = {styles.container}>
@@ -88,11 +97,11 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "#ffffff",
-    fontWeight: "bold",
-    fontFamily: "sans-serif",
-    fontSize: 48,
+    fontFamily: "ComicFont",
+    fontSize: 42,
     textAlign: "center",
-    marginVertical: 20
+    marginVertical: 20,
+    paddingTop: 20,
   },
 })
 

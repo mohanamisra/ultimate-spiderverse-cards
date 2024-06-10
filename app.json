@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/KOMIKAX_.ttf"]
+        }
+      ]
+    ],
     "name": "spiderverse-card-game",
     "slug": "spiderverse-card-game",
     "version": "1.0.0",

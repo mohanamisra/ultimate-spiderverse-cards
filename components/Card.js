@@ -1,12 +1,27 @@
-import {View, ImageBackground, StyleSheet, Text} from "react-native";
+import {View, ImageBackground, StyleSheet, Text, Image} from "react-native";
+import {useFonts} from "expo-font";
+import logo from "../assets/spideylogo.png"
+
 const Card = ({charImage, charName, charPoints, charDesc, charQuote}) => {
+    const [fontsLoaded] = useFonts({
+        "ComicFont": require("../assets/fonts/ComicFont.ttf"),
+    })
+
+    if(!fontsLoaded)
+        return undefined;
+
+
     return (
         <View style={styles.card}>
             <ImageBackground source = {charImage} style={styles.imageBG} resizeMode={"cover"}>
                 <View style = {styles.cardTop}>
-                    <Text style={styles.heading}>
-                        {charName}
-                    </Text>
+                    <View style={{flexDirection:"row", alignItems: "center", width: "85%"}}>
+                        <Image source={logo} style={{width: 40, height: 40,}}/>
+                            <Text style={styles.heading}>
+                                {charName}
+                            </Text>
+                        <Image source={logo} style={{width: 40, height: 40, transform: [{rotateY: '180deg'}]}}/>
+                    </View>
                 </View>
                 <View style = {styles.cardBottom}>
                     <Text style={styles.points}>
@@ -27,12 +42,12 @@ const Card = ({charImage, charName, charPoints, charDesc, charQuote}) => {
 const styles = StyleSheet.create({
     card: {
         width: "80%",
-        height: 550,
+        height: 600,
         borderRadius: 8,
     },
     imageBG: {
         width: "100%",
-        height: 500,
+        height: 550,
         overflow: "hidden",
         borderTopColor: "#A71814",
         borderBottomColor: "#A71814",
@@ -63,8 +78,10 @@ const styles = StyleSheet.create({
     },
     heading: {
         fontFamily: "ComicFont",
-        fontWeight: "900",
-        fontSize: 26,
+        fontSize: 24,
+        textAlign: "center",
+        marginHorizontal: 10,
+        padding: 10
     },
     points: {
         fontWeight: "900",
